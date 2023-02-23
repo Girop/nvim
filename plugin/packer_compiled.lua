@@ -79,6 +79,26 @@ _G.packer_plugins = {
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
+  ["auto-save.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-save.nvim",
+    url = "https://github.com/Pocco81/auto-save.nvim"
+  },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  ["cellular-automaton.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cellular-automaton.nvim",
+    url = "https://github.com/eandrju/cellular-automaton.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -119,6 +139,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
@@ -134,6 +159,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-comment"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17nvim_comment\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
@@ -143,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -173,10 +209,24 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["which-key.nvim"] = {
+    config = { "\27LJ\2\np\0\0\3\0\a\0\0146\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0" },
+    loaded = true,
+    path = "C:\\Users\\Igor\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
+time([[Config for nvim-comment]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\np\0\0\3\0\a\0\0146\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
