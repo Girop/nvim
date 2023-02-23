@@ -2,8 +2,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use('wbthomason/packer.nvim')
 
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -56,4 +55,27 @@ return require('packer').startup(function(use)
         require("nvim_comment").setup()
       end
   }
+  use{
+      "nvim-tree/nvim-tree.lua",
+      requires = {
+          "nvim-tree/nvim-web-devicons"
+      }
+  }
+  use("nvim-tree/nvim-web-devicons")
+  use{
+      "CRAG666/code_runner.nvim",
+      requires = 'nvim-lua/plenary.nvim'
+  }
+
+  use('folke/lsp-colors.nvim')
+  use {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+      config = function()
+          require("trouble").setup{
+
+          }
+      end
+  }
+  use('APZelos/blamer.nvim')
 end)
