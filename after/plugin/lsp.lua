@@ -12,13 +12,10 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
 	['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-	['<C-y>'] = cmp.mapping.confirm({ select = true }),
+	['<Tab>'] = cmp.mapping.confirm({ select = true }),
 	["<C-Space>"] = cmp.mapping.complete(),
 })
-
-lsp.set_preferences({
-	sign_icons = {}
-}) 
+lsp.set_preferences({})
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings
@@ -39,3 +36,22 @@ lsp.on_attach(function(client,bufnr)
 end)
 
 lsp.setup()
+
+vim.diagnostic.config({
+  virtual_text = true,
+})
+
+local null_ls = require('null-ls')
+local null_opts = lsp.build_options('null-ls', {})
+
+null_ls.setup({
+  on_attach = function(client, bufnr)
+    null_opts.on_attach(client, bufnr)
+  end,
+  sources = {
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.formatting.stylua,
+  }
+})
+

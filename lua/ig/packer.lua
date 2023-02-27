@@ -1,16 +1,18 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  use('wbthomason/packer.nvim')
+    use('wbthomason/packer.nvim')
+    --themes 
+    use('fcpg/vim-fahrenheit')
+    use("ellisonleao/gruvbox.nvim")
+    use("fcpg/vim-farout")
+    --
 
-  use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      -- or                            , branch = '0.1.x',
-      requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use { "ellisonleao/gruvbox.nvim" }
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('mbbill/undotree') -- undo branched history
   use('tpope/vim-fugitive') -- git support
@@ -55,7 +57,11 @@ return require('packer').startup(function(use)
         require("nvim_comment").setup()
       end
   }
-  use{
+  use {
+      "akinsho/toggleterm.nvim",
+      tag = "*",
+  }
+  use {
       "nvim-tree/nvim-tree.lua",
       requires = {
           "nvim-tree/nvim-web-devicons"
@@ -72,10 +78,9 @@ return require('packer').startup(function(use)
       "folke/trouble.nvim",
       requires = "nvim-tree/nvim-web-devicons",
       config = function()
-          require("trouble").setup{
-
-          }
+          require("trouble").setup{}
       end
   }
   use('APZelos/blamer.nvim')
+  use {'jose-elias-alvarez/null-ls.nvim'}
 end)

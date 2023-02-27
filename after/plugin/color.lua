@@ -1,4 +1,3 @@
 
 vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
---vim.cmd([[colorscheme ]])
+vim.cmd([[colorscheme fahrenheit]])
