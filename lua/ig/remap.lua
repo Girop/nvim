@@ -30,3 +30,7 @@ vim.keymap.set("i", "<C-Del>", "<C-o>dw")
 
 vim.keymap.set("n","<leader>v","<cmd>vs<cr>")
 vim.keymap.set("n","<leader>q","<C-w><C-q>")
+
+vim.keymap.set('n',"<leader><s-k>","<cmd>vertical resize +10<cr>")
+vim.keymap.set('n',"<leader><s-j>","<cmd>vertical resize -10<cr>")
+
