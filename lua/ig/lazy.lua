@@ -23,12 +23,8 @@ require('lazy').setup({
         tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-    },
-    'nvim-treesitter/playground',
     'mbbill/undotree',
+    'nvim-treesitter/nvim-treesitter',
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -80,19 +76,9 @@ require('lazy').setup({
         "akinsho/toggleterm.nvim",
         tag = "*",
     },
-    {
-        "nvim-tree/nvim-tree.lua",
-        requires = {
-            "nvim-tree/nvim-web-devicons"
-        }
-    },
     "nvim-tree/nvim-web-devicons",
-    {
-        "CRAG666/code_runner.nvim",
-        requires = 'nvim-lua/plenary.nvim'
-    },
-
-    'folke/lsp-colors.nvim',
+    "nvim-tree/nvim-tree.lua",
+        'folke/lsp-colors.nvim',
     {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
