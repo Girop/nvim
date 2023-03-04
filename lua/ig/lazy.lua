@@ -1,5 +1,4 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -12,19 +11,20 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local plugins = {
+    -- themes
+    {"sainnhe/gruvbox-material"},
+    {'fcpg/vim-fahrenheit',lazy=true},
+    {"fcpg/vim-farout",lazy=true},
+    -- 
 
-require('lazy').setup({
-    'wbthomason/packer.nvim',
-    'fcpg/vim-fahrenheit',
-    "ellisonleao/gruvbox.nvim",
-    "fcpg/vim-farout",
+    'nvim-treesitter/nvim-treesitter',
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     },
     'mbbill/undotree',
-    'nvim-treesitter/nvim-treesitter',
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -66,12 +66,7 @@ require('lazy').setup({
         requires = 'nvim-tree/nvim-web-devicons'
     },
     'nvim-lualine/lualine.nvim',
-    {
-        "terrortylor/nvim-comment",
-        config = function ()
-            require("nvim_comment").setup()
-        end
-    },
+    "terrortylor/nvim-comment", 
     {
         "akinsho/toggleterm.nvim",
         tag = "*",
@@ -87,7 +82,16 @@ require('lazy').setup({
         end
     },
     'APZelos/blamer.nvim',
-    {'jose-elias-alvarez/null-ls.nvim'},
+    'jose-elias-alvarez/null-ls.nvim',
     'airblade/vim-gitgutter',
-})
+    'psliwka/vim-smoothie',
+}
 
+local opts = {
+    install = {
+        missing = true,
+        colorscheme = {'sainnhe/gruvbox-material'},
+    }
+}
+
+require('lazy').setup(plugins,opts)
