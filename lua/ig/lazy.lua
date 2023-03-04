@@ -36,7 +36,7 @@ local plugins = {
             {'saadparwaiz1/cmp_luasnip'},
             {'hrsh7th/cmp-nvim-lua'},
             -- grep
-            {'BurntSushi/ripgrep', lazy=false},
+            {'BurntSushi/ripgrep'},
             -- Snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
