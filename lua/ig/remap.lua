@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("v","J",":m '>+1<CR>gv=gv")
-vim.keymap.set("v","K",":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', "J", "mzJ`z")
 
@@ -28,12 +28,12 @@ vim.keymap.set("n","<leader>p", "\"_dP")
 
 vim.keymap.set("i", "<C-Del>", "<C-o>dw")
 
-vim.keymap.set("n","<leader>v","<cmd>vs<cr>")
-vim.keymap.set("n","<leader>q","<C-w><C-q>")
+vim.keymap.set("n", "<leader>v", "<cmd>vs<cr>")
+vim.keymap.set("n", "<leader>q", "<C-w><C-q>")
 
-vim.keymap.set('n',"<leader><s-k>","<cmd>vertical resize +10<cr>")
-vim.keymap.set('n',"<leader><s-j>","<cmd>vertical resize -10<cr>")
+vim.keymap.set('n', "<leader><s-k>", "<cmd>vertical resize +10<cr>")
+vim.keymap.set('n', "<leader><s-j>", "<cmd>vertical resize -10<cr>")
 
-vim.keymap.set('n','<M-j>', 'yyp')
-vim.keymap.set('n','<M-k>', 'yyP')
+vim.keymap.set('n', '<M-j>', 'yyp')
+vim.keymap.set('n', '<M-k>', 'yyP')
 
