@@ -16,6 +16,8 @@ local plugins = {
     -- themes
     'fcpg/vim-fahrenheit',
     'artanikin/vim-synthwave84',
+    'sainnhe/gruvbox-material',
+    'Mofiqul/dracula.nvim',
     -- 
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
@@ -57,6 +59,7 @@ local plugins = {
     'jose-elias-alvarez/null-ls.nvim',
     'airblade/vim-gitgutter',
     'nvim-tree/nvim-tree.lua',
+    'onsails/lspkind.nvim',
 }
 
 local opts  ={
@@ -68,4 +71,7 @@ local opts  ={
 require('lazy').setup(plugins,opts)
 
 vim.o.background = 'dark'
-vim.cmd[[colorscheme synthwave84]]
+vim.cmd[[let g:gruvbox_material_better_performance = 1]]
+vim.cmd[[let g:gruvbox_material_foreground = 'original']]
+vim.cmd[[let g:gruvbox_material_background = 'soft']]
+vim.cmd[[colorscheme gruvbox-material]]

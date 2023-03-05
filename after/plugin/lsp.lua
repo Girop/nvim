@@ -28,8 +28,9 @@ lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
 
+-- i dunno what it does
 lsp.on_attach(function(client,bufnr)
-    local opts = {buffer = bufnr, remap = false} 
+    local opts = {buffer = bufnr, remap = false}
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
@@ -42,8 +43,45 @@ lsp.on_attach(function(client,bufnr)
     vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
     null_ls.setup(client)
 end)
-
-lsp.setup()
+--
+-- not working?
+lsp.setup{
+    capabilities = {
+        textDocument = {
+            completion = {
+                completionItem = {
+                    -- only include non-text completion item kinds
+                    kind = {
+                        "Method",
+                        "Function",
+                        "Constructor",
+                        "Field",
+                        "Variable",
+                        "Class",
+                        "Interface",
+                        "Module",
+                        "Property",
+                        "Unit",
+                        "Value",
+                        "Enum",
+                        "Keyword",
+                        "Snippet",
+                        "Color",
+                        "File",
+                        "Reference",
+                        "Folder",
+                        "EnumMember",
+                        "Constant",
+                        "Struct",
+                        "Event",
+                        "Operator",
+                        "TypeParameter",
+                    },
+                },
+            },
+        },
+    },
+}
 
 vim.diagnostic.config({
   virtual_text = true,
