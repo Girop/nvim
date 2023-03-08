@@ -6,11 +6,14 @@ require("toggleterm").setup{
     auto_scroll = true,
 }
 
+
 function RunFile()
     local current_filename = vim.api.nvim_buf_get_name(0)
+    print(vim.bo.filetype)
         local commands = {
         ['rust'] = 'cargo run',
         ['python'] = 'python ' .. current_filename,
+        ['modsim3'] = 'oplrun -v -p .' -- cplex
     }
     return commands[vim.bo.filetype]
 end

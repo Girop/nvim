@@ -37,3 +37,8 @@ vim.keymap.set('n', "<leader><s-j>", "<cmd>vertical resize -10<cr>")
 vim.keymap.set('n', '<M-j>', 'yyp')
 vim.keymap.set('n', '<M-k>', 'yyP')
 
+vim.keymap.set('n', '<C-l>', '<C-w>l')
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+
+vim.keymap.set('n','<leader><leader>','<c-o>')
+
