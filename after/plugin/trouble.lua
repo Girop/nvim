@@ -1,4 +1,6 @@
-require("trouble").setup{}
+require("trouble").setup{
+    use_diagnostic_sings = true
+}
 
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}

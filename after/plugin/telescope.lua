@@ -1,6 +1,19 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
+
 telescope.setup{
+    defaults = {
+        mappings = {
+            n = {
+                ["<M-j>"] = actions.move_selection_next,
+                ["<M-k>"] = actions.move_selection_previous,
+            },
+            i = {
+                ["<M-j>"] = actions.move_selection_next,
+                ["<M-k>"] = actions.move_selection_previous,
+            },
+        },
+    },
     pickers = {
         find_files = {
             hidden = true,

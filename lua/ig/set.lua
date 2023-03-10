@@ -34,7 +34,3 @@ vim.opt.clipboard:prepend {'unnamed', 'unnamedplus'}
 
 vim.cmd[[set cursorline]]
 
-vim.diagnostic.config({
-  virtual_text = true,
-})
-
