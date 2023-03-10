@@ -29,6 +29,7 @@ lsp.setup_nvim_cmp({
     sources = cmp.config.sources{
         {name = 'path'},
         {name = 'nvim_lsp'},
+        {name = 'buffer'},
         {name = 'luasnip'},
     }
 })
@@ -47,3 +48,6 @@ lsp.on_attach(function(client,bufnr)
     vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
     null_ls.setup(client)
 end)
+
+lsp.setup()
+

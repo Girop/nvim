@@ -51,7 +51,6 @@ vim.cmd[[command! -count=1 TermGitCommit lua require'toggleterm'.exec("git commi
 
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm size=40<cr>")
 vim.keymap.set("n","<leader>r",  "<cmd>TermCodeRun<cr>")
-vim.keymap.set("n","<leader>ff",  "<cmd>TermCodeFormat<cr>")
 
 -- git shortcuts
 vim.keymap.set("n","<leader>ga", "<cmd>TermGitAdd<cr>")

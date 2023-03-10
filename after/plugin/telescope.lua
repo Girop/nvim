@@ -7,8 +7,7 @@ telescope.setup{
             no_ignore = true,
             no_ignore_parent = true,
         }
-    },
-    defaults = {},
+    }
 }
 
 local builtin = require('telescope.builtin')
