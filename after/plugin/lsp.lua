@@ -25,10 +25,14 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
+    mapping = cmp_mappings,
+    sources = cmp.config.sources{
+        {name = 'path'},
+        {name = 'nvim_lsp'},
+        {name = 'luasnip'},
+    }
 })
 
--- i dunno what it does
 lsp.on_attach(function(client,bufnr)
     local opts = {buffer = bufnr, remap = false}
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
@@ -43,47 +47,3 @@ lsp.on_attach(function(client,bufnr)
     vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
     null_ls.setup(client)
 end)
---
--- not working?
-lsp.setup{
-    capabilities = {
-        textDocument = {
-            completion = {
-                completionItem = {
-                    -- only include non-text completion item kinds
-                    kind = {
-                        "Method",
-                        "Function",
-                        "Constructor",
-                        "Field",
-                        "Variable",
-                        "Class",
-                        "Interface",
-                        "Module",
-                        "Property",
-                        "Unit",
-                        "Value",
-                        "Enum",
-                        "Keyword",
-                        "Snippet",
-                        "Color",
-                        "File",
-                        "Reference",
-                        "Folder",
-                        "EnumMember",
-                        "Constant",
-                        "Struct",
-                        "Event",
-                        "Operator",
-                        "TypeParameter",
-                    },
-                },
-            },
-        },
-    },
-}
-
-vim.diagnostic.config({
-  virtual_text = true,
-})
-

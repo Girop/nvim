@@ -11,8 +11,6 @@ require("nvim-tree").setup({
   },
 })
 
-
---vim.g.nvim_tree_gitignore = 0
 vim.cmd[[let g:nvim_tree_gitignore = 0]]
 
 local function is_nvim_tree()
@@ -34,7 +32,6 @@ end)
 
 local on_attach = function(bufnr)
     local api = require('nvim-tree.api')
-    -- BEGIN_DEFAULT_ON_ATTACH
     local opts = function(desc)
       return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
@@ -90,5 +87,4 @@ local on_attach = function(bufnr)
     vim.keymap.set('n', 'Y',     api.fs.copy.relative_path,             opts('Copy Relative Path'))
     vim.keymap.set('n', '<2-LeftMouse>',  api.node.open.edit,           opts('Open'))
     vim.keymap.set('n', '<2-RightMouse>', api.tree.change_root_to_node, opts('CD'))
-    -- END_DEFAULT_ON_ATTACH
   end

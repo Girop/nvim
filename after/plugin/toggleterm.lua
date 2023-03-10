@@ -18,6 +18,19 @@ function RunFile()
     return commands[vim.bo.filetype]
 end
 
+local powershell_options = {
+  shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
+  shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+  shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+  shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+  shellquote = "",
+  shellxquote = "",
+}
+
+for option, value in pairs(powershell_options) do
+  vim.opt[option] = value
+end
+
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
@@ -33,8 +46,8 @@ vim.cmd[[autocmd! TermOpen term://* lua set_terminal_keymaps()]]
 
 vim.cmd[[command! -count=1 TermCodeRun lua require'toggleterm'.exec(RunFile(), <count>, 40)]]
 
-vim.cmd[[command! -count=2 TermGitAdd lua require'toggleterm'.exec("git add .", <count>, 40)]]
-vim.cmd[[command! -count=2 TermGitCommit lua require'toggleterm'.exec("git commit", <count>, 40)]]
+vim.cmd[[command! -count=1 TermGitAdd lua require'toggleterm'.exec("git add .", <count>, 40)]]
+vim.cmd[[command! -count=1 TermGitCommit lua require'toggleterm'.exec("git commit", <count>, 40)]]
 
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm size=40<cr>")
 vim.keymap.set("n","<leader>r",  "<cmd>TermCodeRun<cr>")
