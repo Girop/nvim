@@ -56,7 +56,6 @@ local plugins = {
     "folke/lsp-colors.nvim",
     "folke/trouble.nvim",
     'APZelos/blamer.nvim',
-    'jose-elias-alvarez/null-ls.nvim',
     'airblade/vim-gitgutter',
     'nvim-tree/nvim-tree.lua',
     'onsails/lspkind.nvim',
