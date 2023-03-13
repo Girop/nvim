@@ -30,6 +30,7 @@
   "ripgrep": { "branch": "master", "commit": "44fb9fce2c1ee1a86c450702ea3ca2952bf6c5a7" },
   "telescope.nvim": { "branch": "master", "commit": "a3f17d3baf70df58b9d3544ea30abe52a7a832c2" },
   "toggleterm.nvim": { "branch": "main", "commit": "31d38d11390bcd35a568fcc65a79b7d6ec89de62" },
+  "tokyonight.nvim": { "branch": "main", "commit": "3ebc29df627c5cf70eb6acb8f0843c9ea9cf6348" },
   "trouble.nvim": { "branch": "main", "commit": "67337644e38144b444d026b0df2dc5fa0038930f" },
   "undotree": { "branch": "master", "commit": "485f01efde4e22cb1ce547b9e8c9238f36566f21" },
   "vim-fahrenheit": { "branch": "master", "commit": "d19d5bc60abe8b5479b62d9ccfc3a42aaebec724" },

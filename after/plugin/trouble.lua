@@ -1,6 +1,13 @@
-require("trouble").setup{
-    use_diagnostic_sings = true
-}
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})
+
+require("trouble").setup{}
 
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}

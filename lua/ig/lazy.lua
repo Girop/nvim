@@ -17,6 +17,7 @@ local plugins = {
     'artanikin/vim-synthwave84',
     'sainnhe/gruvbox-material',
     'Mofiqul/dracula.nvim',
+    'folke/tokyonight.nvim',
     -- 
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
@@ -61,7 +62,7 @@ local plugins = {
     'onsails/lspkind.nvim',
 }
 
-local opts  ={
+local opts = {
     install = {
         missing = true,
     }
