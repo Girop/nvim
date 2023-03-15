@@ -7,10 +7,12 @@ telescope.setup{
             n = {
                 ["<M-j>"] = actions.move_selection_next,
                 ["<M-k>"] = actions.move_selection_previous,
+                ["<Tab>"] = actions.select_default,
             },
             i = {
                 ["<M-j>"] = actions.move_selection_next,
                 ["<M-k>"] = actions.move_selection_previous,
+                ["<Tab>"] = actions.select_default,
             },
         },
     },

@@ -31,6 +31,5 @@ vim.scriptencoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 vim.opt.clipboard:prepend {'unnamed', 'unnamedplus'}
-
-vim.cmd[[set cursorline]]
+vim.opt.cursorline = true
 

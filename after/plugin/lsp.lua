@@ -10,7 +10,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-s>"] = cmp.mapping.complete(),
 })
 
-lsp.setup_nvim_cmp({
+lsp.setup_nvim_cmp{
     mapping = cmp_mappings,
     sources = cmp.config.sources{
         {name = 'path'},
@@ -18,9 +18,9 @@ lsp.setup_nvim_cmp({
         {name = 'buffer'},
         {name = 'luasnip'},
     }
-})
+}
 
-lsp.on_attach(function(client,bufnr)
+lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
