@@ -10,15 +10,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-s>"] = cmp.mapping.complete(),
 })
 
-lsp.setup_nvim_cmp{
-    mapping = cmp_mappings,
-    sources = cmp.config.sources{
-        {name = 'path'},
-        {name = 'nvim_lsp'},
-        {name = 'buffer'},
-        {name = 'luasnip'},
-    }
-}
+lsp.setup_nvim_cmp{mapping = cmp_mappings}
 
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}

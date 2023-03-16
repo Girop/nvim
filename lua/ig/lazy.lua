@@ -58,6 +58,7 @@ local plugins = {
     'APZelos/blamer.nvim',
     'airblade/vim-gitgutter',
     'onsails/lspkind.nvim',
+    'jose-elias-alvarez/null-ls.nvim',
 }
 
 local opts = {
@@ -65,9 +66,7 @@ local opts = {
         missing = true,
     }
 }
-
 require('lazy').setup(plugins,opts)
-
 vim.o.background = 'dark'
 vim.cmd[[let g:gruvbox_material_better_performance = 1]]
 vim.cmd[[let g:gruvbox_material_foreground = 'original']]

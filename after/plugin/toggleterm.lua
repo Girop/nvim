@@ -1,11 +1,3 @@
-local Terminal = require('toggleterm.terminal').Terminal
-require("toggleterm").setup{
-    autochdir = true,
-    start_in_insert = true,
-    direction = "vertical",
-    auto_scroll = true,
-}
-
 function RunFile()
     local current_filename = vim.api.nvim_buf_get_name(0)
     -- print(vim.bo.filetype)
@@ -43,4 +35,10 @@ vim.keymap.set("n","<leader>r",  "<cmd>TermCodeRun<cr>")
 vim.keymap.set("n","<leader>ga", "<cmd>TermGitAdd<cr>")
 vim.keymap.set("n","<leader>gm", "<cmd>TermGitCommit<cr>")
 
+require("toggleterm").setup{
+    autochdir = true,
+    start_in_insert = true,
+    direction = "vertical",
+    auto_scroll = true,
+}
 
