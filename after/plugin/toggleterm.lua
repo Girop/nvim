@@ -1,9 +1,15 @@
 function RunFile()
     local current_filename = vim.api.nvim_buf_get_name(0)
-    -- print(vim.bo.filetype)
-        local commands = {
+    local function get_python()
+        if vim.fn.has('linux') then
+            return 'python3'
+        end
+        return 'python'
+    end
+
+    local commands = {
         ['rust'] = 'cargo run',
-        ['python'] = 'python ' .. current_filename,
+        ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
         ['c'] = 'gcc main.c',
     }
