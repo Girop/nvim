@@ -1,10 +1,10 @@
 function RunFile()
     local current_filename = vim.api.nvim_buf_get_name(0)
     local function get_python()
-        if vim.fn.has('linux') then
-            return 'python3'
+        if vim.fn.has('windows') then
+            return 'python'
         end
-        return 'python'
+        return 'python3'
     end
 
     local commands = {
@@ -12,6 +12,7 @@ function RunFile()
         ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
         ['c'] = 'gcc main.c',
+        ['go'] = 'go run ' .. current_filename,
     }
     return commands[vim.bo.filetype]
 end
