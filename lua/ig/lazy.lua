@@ -93,7 +93,7 @@ require("catppuccin").setup({
     },
     color_overrides = {
         mocha = {
-            text = "#CC99FF",
+            text = "#F8C8DC",
             subtext1 = "#DEBAD4",
             subtext0 = "#C8A6BE",
             overlay2 = "#B293A8",
@@ -114,6 +114,7 @@ require("catppuccin").setup({
         gitsigns = true,
         nvimtree = true,
         telescope = true,
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
 
