@@ -54,6 +54,7 @@ local plugins = {
     'airblade/vim-gitgutter',
     'onsails/lspkind.nvim',
     'jose-elias-alvarez/null-ls.nvim',
+    'akinsho/git-conflict.nvim',
 }
 
 local opts = {
@@ -114,7 +115,6 @@ require("catppuccin").setup({
         gitsigns = true,
         nvimtree = true,
         telescope = true,
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
 
