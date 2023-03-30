@@ -55,6 +55,7 @@ local plugins = {
     'onsails/lspkind.nvim',
     'jose-elias-alvarez/null-ls.nvim',
     'akinsho/git-conflict.nvim',
+    'fatih/vim-go',
 }
 
 local opts = {
