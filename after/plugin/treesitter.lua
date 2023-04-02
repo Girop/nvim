@@ -6,7 +6,8 @@ require('nvim-treesitter.configs').setup{
         "help",
         "query",
         "python",
-        "go"
+        "go",
+        "comment"
     },
     auto_install = true,
     highlight = {
