@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    -- themes
     'sainnhe/gruvbox-material',
     { "catppuccin/nvim", name = "catppuccin" },
     'nvim-lua/plenary.nvim',
@@ -56,6 +57,7 @@ local plugins = {
     'jose-elias-alvarez/null-ls.nvim',
     'akinsho/git-conflict.nvim',
     'tpope/vim-fugitive',
+    'github/copilot.vim',
 }
 
 local opts = {
