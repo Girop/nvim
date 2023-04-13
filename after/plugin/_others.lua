@@ -7,7 +7,7 @@ require("nvim-web-devicons").setup{
 }
 
 -- Keymaps
-vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
+vim.keymap.set("n", "<leader>clr", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Blamer

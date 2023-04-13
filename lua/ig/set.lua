@@ -30,6 +30,7 @@ vim.opt.encoding = "utf-8"
 vim.scriptencoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
-vim.opt.clipboard:prepend {'unnamed', 'unnamedplus'}
+vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
 vim.opt.cursorline = true
 
+vim.o.pumheight = 15

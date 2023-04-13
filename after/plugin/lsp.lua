@@ -12,6 +12,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 lsp.setup_nvim_cmp { mapping = cmp_mappings }
 
+
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
@@ -27,34 +28,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
-
-local null_ls = require('null-ls')
-local null_opts = lsp.build_options('null-ls', {})
-local null_builtins =
-    null_ls.setup({
-        on_attach = function(client, bufnr)
-            null_opts.on_attach(client, bufnr)
-
-            local format_cmd = function(input)
-                vim.lsp.buf.format({
-                    id = client.id,
-                    timeout_ms = 5000,
-                    async = input.bang,
-                })
-            end
-
-            local bufcmd = vim.api.nvim_buf_create_user_command
-            bufcmd(bufnr, 'NullFormat', format_cmd, {
-                bang = true,
-                range = true,
-                desc = 'Format using null-ls'
-            })
-        end,
-        sources = {
-            null_ls.builtins.formatting.isort,
-            null_ls.builtins.formatting.black,
-        }
-    })
 
 vim.keymap.set("n", "<leader>k", function()
     vim.lsp.buf.format()

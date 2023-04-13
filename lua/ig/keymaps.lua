@@ -40,6 +40,4 @@ vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 
-vim.keymap.set('n', '<leader><leader>', function()
-    vim.cmd("e #")
-end)
+vim.keymap.set('n', '<leader><leader>', "<cmd>e #<cr>")
