@@ -43,6 +43,7 @@ local plugins = {
     },
     'eandrju/cellular-automaton.nvim',
     "jiangmiao/auto-pairs",
+    "Pocco81/auto-save.nvim",
     "folke/which-key.nvim",
     'nvim-lualine/lualine.nvim',
     "terrortylor/nvim-comment",
