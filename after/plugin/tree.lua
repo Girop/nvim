@@ -51,6 +51,9 @@ require("nvim-tree").setup({
     auto_reload_on_write = true,
     disable_netrw = true,
     sync_root_with_cwd = true,
+    git = {
+        ignore = false,
+    },
     view = {
         side = "right",
         mappings = {
