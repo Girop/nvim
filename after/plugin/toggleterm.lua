@@ -11,7 +11,8 @@ function RunFile()
         ['rust'] = 'cargo run',
         ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
-        ['c'] = 'gcc main.c',
+        ['c'] = 'gcc '  .. current_filename,
+        ['cpp'] = 'g++ '  .. current_filename,
         ['go'] = 'go run .',
     }
     return commands[vim.bo.filetype]

@@ -1,17 +1,18 @@
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
+
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
+    ["<CR>"] = cmp.config.disable,
     ['<M-k>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<M-j>'] = cmp.mapping.select_next_item(cmp_select),
     ['<Tab>'] = cmp.mapping.confirm({ select = true }),
     ["<C-s>"] = cmp.mapping.complete(),
 })
 
-lsp.setup_nvim_cmp { mapping = cmp_mappings }
-
+lsp.setup_nvim_cmp { preselect = cmp.PreselectMode.None, mapping = cmp_mappings }
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
@@ -28,6 +29,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
 
 vim.keymap.set("n", "<leader>k", function()
     vim.lsp.buf.format()

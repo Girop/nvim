@@ -55,7 +55,7 @@ local plugins = {
     'APZelos/blamer.nvim',
     'airblade/vim-gitgutter',
     'onsails/lspkind.nvim',
-    'jose-elias-alvarez/null-ls.nvim',
+    --'jose-elias-alvarez/null-ls.nvim',
     'akinsho/git-conflict.nvim',
     'tpope/vim-fugitive',
     'github/copilot.vim',
