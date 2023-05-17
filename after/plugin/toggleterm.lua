@@ -12,7 +12,7 @@ function RunFile()
         ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
         ['c'] = 'gcc '  .. current_filename,
-        ['cpp'] = 'g++ '  .. current_filename,
+        ['cpp'] = 'mkdir -p build; cd build; make; ./main; cd ..',
         ['go'] = 'go run .',
     }
     return commands[vim.bo.filetype]
