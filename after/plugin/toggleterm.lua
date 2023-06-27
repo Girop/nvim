@@ -7,13 +7,14 @@ function RunFile()
         return 'python3'
     end
 
+
     local commands = {
         ['rust'] = 'cargo run',
         ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
-        ['c'] = 'gcc '  .. current_filename,
-        ['cpp'] = 'mkdir -p build; cd build; make; ./main; cd ..',
+        ['c'] = "cd build && make && ./main; cd ..",
         ['go'] = 'go run .',
+        ['tex'] = 'pdflatex ' .. current_filename,
     }
     return commands[vim.bo.filetype]
 end
@@ -34,7 +35,7 @@ vim.cmd[[command! -count=1 TermCodeRun lua require'toggleterm'.exec(RunFile(), <
 vim.cmd[[command! -count=1 TermGitAdd lua require'toggleterm'.exec("git add .", <count>, 40)]]
 vim.cmd[[command! -count=1 TermGitCommit lua require'toggleterm'.exec("git commit", <count>, 40)]]
 
-vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm size=40<cr>")
+vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
 vim.keymap.set("n","<leader>r",  "<cmd>TermCodeRun<cr>")
 
 require("toggleterm").setup{
@@ -43,4 +44,3 @@ require("toggleterm").setup{
     direction = "vertical",
     auto_scroll = true,
 }
-
