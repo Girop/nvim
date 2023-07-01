@@ -13,6 +13,7 @@ function RunFile()
         ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
         ['c'] = "cd build && make && ./main; cd ..",
+        ['cpp'] = "cd build && make && ./main; cd ..",
         ['go'] = 'go run .',
         ['tex'] = 'pdflatex ' .. current_filename,
     }

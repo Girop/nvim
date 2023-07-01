@@ -4,3 +4,4 @@ Prerequisites:
 - git
 - node.js
 - any "C" compiler
+- Ripgrep

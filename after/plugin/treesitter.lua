@@ -3,10 +3,8 @@ require('nvim-treesitter.configs').setup{
         "c",
         "lua",
         "vim",
-        "help",
         "query",
         "python",
-        "go",
         "comment"
     },
     auto_install = true,
