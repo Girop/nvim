@@ -24,7 +24,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = "120"
 
 vim.opt.encoding = "utf-8"
 vim.scriptencoding = "utf-8"

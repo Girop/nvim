@@ -12,8 +12,8 @@ function RunFile()
         ['rust'] = 'cargo run',
         ['python'] = get_python() .. ' ' .. current_filename,
         ['modsim3'] = 'oplrun -v -p .', -- cplex
-        ['c'] = "cd build && make && ./main; cd ..",
-        ['cpp'] = "cd build && make && ./main; cd ..",
+        ['c'] = "make && bin/game && make clean",
+        ['cpp'] = "make && obj/main",
         ['go'] = 'go run .',
         ['tex'] = 'pdflatex ' .. current_filename,
     }

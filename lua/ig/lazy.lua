@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     -- themes
     'sainnhe/gruvbox-material',
-    { "catppuccin/nvim", name = "catppuccin" },
     --
     'nvim-lua/plenary.nvim',
     'nvim-lualine/lualine.nvim',
@@ -43,23 +42,23 @@ local plugins = {
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
         },
-    },
-   
-    'eandrju/cellular-automaton.nvim',
+    }, 
+
     "jiangmiao/auto-pairs",
-    "Pocco81/auto-save.nvim",
     "terrortylor/nvim-comment",
     "akinsho/toggleterm.nvim",
-    "folke/which-key.nvim",
     "folke/lsp-colors.nvim",
     "folke/trouble.nvim",
     'APZelos/blamer.nvim',
     'airblade/vim-gitgutter',
     'onsails/lspkind.nvim',
     'lervag/vimtex',
-    'akinsho/git-conflict.nvim',
+    {'akinsho/git-conflict.nvim', version = "*", config = true},
     'tpope/vim-fugitive',
-    'github/copilot.vim',
+
+    -- 'eandrju/cellular-automaton.nvim',
+    -- "Pocco81/auto-save.nvim",
+    -- "folke/which-key.nvim",
 }
 
 local opts = {
