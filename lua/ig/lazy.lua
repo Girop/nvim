@@ -15,6 +15,7 @@ local plugins = {
     -- themes
     'sainnhe/gruvbox-material',
     --
+
     'nvim-lua/plenary.nvim',
     'nvim-lualine/lualine.nvim',
     'nvim-treesitter/nvim-treesitter',
@@ -55,10 +56,7 @@ local plugins = {
     'lervag/vimtex',
     {'akinsho/git-conflict.nvim', version = "*", config = true},
     'tpope/vim-fugitive',
-
-    -- 'eandrju/cellular-automaton.nvim',
-    -- "Pocco81/auto-save.nvim",
-    -- "folke/which-key.nvim",
+    "Pocco81/auto-save.nvim",
 }
 
 local opts = {
@@ -66,5 +64,4 @@ local opts = {
         missing = true,
     }
 }
-
 require('lazy').setup(plugins, opts)
