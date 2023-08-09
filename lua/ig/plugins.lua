@@ -64,6 +64,7 @@ require("nvim-tree").setup({
         centralize_selection = true,
     },
     renderer = {
+        root_folder_label = false,
         group_empty = false,
     },
     diagnostics = {
@@ -105,9 +106,9 @@ telescope.setup{
      pickers = {
          find_files = {
              hidden = true,
-             -- no_ignore = true,
-             -- no_ignore_parent = true,
-             file_ignore_patterns = {"%.git/.*"},
+            file_ignore_patterns = {
+                "%.git/.*", "build/.*"
+            }
          }
      }
  }
@@ -122,10 +123,10 @@ vim.keymap.set('n','<leader>fb', builtin.buffers)
  -- Lualine
 local status, lualine = pcall(require, 'lualine')
 
---if (not status) then return end
+if (not status) then return end
 lualine.setup {
-    sections = {},
-    inactive_sections = {},
+    -- sections = {},
+    -- inactive_sections = {},
     disable_statusline = false,
     options = {
         icons_enabled = true,

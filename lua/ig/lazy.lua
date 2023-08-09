@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     -- themes
     'sainnhe/gruvbox-material',
+    'catppuccin/nvim',
     --
 
     'nvim-lua/plenary.nvim',
