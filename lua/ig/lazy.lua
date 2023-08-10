@@ -15,6 +15,8 @@ local plugins = {
     -- themes
     'sainnhe/gruvbox-material',
     'catppuccin/nvim',
+    'fcpg/vim-farout',
+    'fcpg/vim-fahrenheit',
     --
 
     'nvim-lua/plenary.nvim',
@@ -44,7 +46,7 @@ local plugins = {
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
         },
-    }, 
+    },
 
     "jiangmiao/auto-pairs",
     "terrortylor/nvim-comment",
