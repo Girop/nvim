@@ -12,13 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    -- themes
-    'sainnhe/gruvbox-material',
-    'catppuccin/nvim',
-    'fcpg/vim-farout',
-    'fcpg/vim-fahrenheit',
-    --
-
+    { 'rose-pine/neovim', name = 'rose-pine'},
     'nvim-lua/plenary.nvim',
     'nvim-lualine/lualine.nvim',
     'nvim-treesitter/nvim-treesitter',
@@ -47,7 +41,6 @@ local plugins = {
             { 'rafamadriz/friendly-snippets' },
         },
     },
-
     "jiangmiao/auto-pairs",
     "terrortylor/nvim-comment",
     "akinsho/toggleterm.nvim",
@@ -57,8 +50,10 @@ local plugins = {
     'airblade/vim-gitgutter',
     'onsails/lspkind.nvim',
     'lervag/vimtex',
-    {'akinsho/git-conflict.nvim', version = "*", config = true},
+    -- {'akinsho/git-conflict.nvim', version = "*", config = true},
+    "christoomey/vim-tmux-navigator",
     'tpope/vim-fugitive',
+    "tpope/vim-sensible",
     "Pocco81/auto-save.nvim",
 }
 
