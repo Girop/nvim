@@ -13,6 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     { 'rose-pine/neovim', name = 'rose-pine'},
+    'sainnhe/gruvbox-material',
+
+    'nvim-lua/plenary.nvim',
     'nvim-lua/plenary.nvim',
     'nvim-lualine/lualine.nvim',
     'nvim-treesitter/nvim-treesitter',
