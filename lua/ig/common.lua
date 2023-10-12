@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
-vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>dd", "\"_dd")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -22,8 +22,8 @@ vim.keymap.set("n", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>v", "<cmd>vs<cr>")
 vim.keymap.set("n", "<leader>q", "<C-w><C-q>")
 
-vim.keymap.set('n', "<leader><s-k>", "<cmd>vertical resize +10<cr>")
-vim.keymap.set('n', "<leader><s-j>", "<cmd>vertical resize -10<cr>")
+vim.keymap.set('n', "<leader><s-k>", "<cmd>vertical resize +15<cr>")
+vim.keymap.set('n', "<leader><s-j>", "<cmd>vertical resize -15<cr>")
 
 vim.keymap.set('n', '<M-j>', 'yyp')
 vim.keymap.set('n', '<M-k>', 'yyP')
@@ -38,7 +38,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
-vim.opt.smartindent = false
+vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -48,23 +48,28 @@ vim.opt.hlsearch = true
 vim.opt.relativenumber = true
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
+
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
-vim.opt.updatetime = 51
+vim.opt.updatetime = 50
 vim.opt.colorcolumn = "100"
+vim.cmd("set clipboard+=unnamedplus")
+
 vim.opt.encoding = "utf-8"
 vim.scriptencoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.cmd[[set clipboard+=unnamedplus]]
 vim.opt.cursorline = true
 vim.o.pumheight = 15
 
+vim.cmd("set autowrite")
+vim.cmd("set autowriteall")
+
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  update_in_insert = false,
-  underline = true,
-  severity_sort = false,
-  float = true,
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = false,
+    float = true,
 })
