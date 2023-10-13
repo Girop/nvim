@@ -19,7 +19,7 @@ local plugins = {
         dependencies = {'nvim-tree/nvim-web-devicons'},
     },
     'nvim-lualine/lualine.nvim',
-    'christoomey/vim-tmux-navigator', 
+    'christoomey/vim-tmux-navigator',
     {
         'nvim-telescope/telescope.nvim',
         dependencies = {
@@ -27,23 +27,23 @@ local plugins = {
             'BurntSushi/ripgrep',
         },
     },
-    'terrortylor/nvim-comment', 
+    'terrortylor/nvim-comment',
     'mbbill/undotree',
     'tpope/vim-sensible',
     'cohama/lexima.vim',
     'APZelos/blamer.nvim',
-    'airblade/vim-gitgutter', 
+    'airblade/vim-gitgutter',
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         dependencies = {
-          {'neovim/nvim-lspconfig'},             
-          {'williamboman/mason.nvim'},           
+          {'neovim/nvim-lspconfig'},
+          {'williamboman/mason.nvim'},
           {'williamboman/mason-lspconfig.nvim'},
 
-          {'hrsh7th/nvim-cmp'},    
+          {'hrsh7th/nvim-cmp'},
           {'hrsh7th/cmp-nvim-lsp'},
-          {'L3MON4D3/LuaSnip'},   
+          {'L3MON4D3/LuaSnip'},
         }
       },
     'onsails/lspkind.nvim',
@@ -78,4 +78,5 @@ local opts = {
         missing = true,
     }
 }
+
 require('lazy').setup(plugins, opts)

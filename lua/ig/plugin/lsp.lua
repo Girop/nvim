@@ -47,3 +47,11 @@ end)
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 lsp.setup()
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+require("mason-lspconfig").setup_handlers {
+    function (server_name)
+        require("lspconfig")[server_name].setup {}
+    end,
+}
