@@ -5,7 +5,7 @@ local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
   preselect = 'item',
   sources = {
-    {name = 'nvim_lsp'},
+      {name = 'nvim_lsp'},
   },
   mapping = {
     ['<Tab>'] = cmp.mapping.confirm({select = true}),

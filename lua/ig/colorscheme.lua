@@ -4,8 +4,12 @@ vim.cmd[[
     endif
 
     set background=dark
-    let g:gruvbox_material_background = 'hard'
-    let g:gruvbox_material_better_performance = 1
+    let g:gruvbox_material_background='hard'
+    let g:gruvbox_material_better_performance=1
+    let g:gruvbox_material_foreground='mix'
+
+    let g:python_highlight_all = 1
 
     colorscheme gruvbox-material
 ]]
+

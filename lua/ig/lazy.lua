@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     'sainnhe/gruvbox-material',
+    'sheerun/vim-polyglot',
     'nvim-treesitter/nvim-treesitter',
     {
         'nvim-tree/nvim-tree.lua',
@@ -49,29 +50,6 @@ local plugins = {
     'onsails/lspkind.nvim',
     -- Git conflict support
 }
-
-
--- {
-    --'VonHeikemen/lsp-zero.nvim',
-   -- dependencies = {
-    -- LSP Support
-   -- { 'neovim/nvim-lspconfig' },   
-   -- { 'williamboman/mason.nvim' },
-    --{ 'williamboman/mason-lspconfig.nvim' },
-
-    -- Autocompletion
-   -- { 'hrsh7th/nvim-cmp'},
-   -- { 'hrsh7th/cmp-nvim-lsp'},
-   -- { 'hrsh7th/cmp-buffer' },
-   -- { 'hrsh7th/cmp-path' },
-    --{ 'hrsh7th/cmp-nvim-lua' },
-   -- { 'saadparwaiz1/cmp_luasnip' },
-    -- },
-    -- },
-    -- 'folke/lsp-colors.nvim',
-    -- 'folke/trouble.nvim',
-    -- 'tpope/vim-fugitive',
--- }
 
 local opts = {
     install = {
