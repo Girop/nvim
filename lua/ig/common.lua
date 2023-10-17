@@ -30,6 +30,8 @@ vim.keymap.set('n', '<M-k>', 'yyP')
 
 vim.keymap.set('n', '<leader><leader>', "<cmd>e #<cr>")
 
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
+
 
 -- Sets and others --
 vim.opt.nu = true
