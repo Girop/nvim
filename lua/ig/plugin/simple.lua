@@ -4,9 +4,6 @@ require("nvim-web-devicons").setup {
     default = true,
 }
 
-vim.cmd("let g:blamer_enabled = 1")
-vim.cmd("let g:blamer_relative_time = 1")
-vim.cmd("let g:blamer_delay = 100")
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 

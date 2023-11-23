@@ -32,7 +32,6 @@ local plugins = {
     'mbbill/undotree',
     'tpope/vim-sensible',
     'cohama/lexima.vim',
-    'APZelos/blamer.nvim',
     'airblade/vim-gitgutter',
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -48,7 +47,7 @@ local plugins = {
         }
       },
     'onsails/lspkind.nvim',
-    -- Git conflict support
+    'tpope/vim-fugitive',
 }
 
 local opts = {
