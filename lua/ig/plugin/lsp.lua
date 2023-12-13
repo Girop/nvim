@@ -46,7 +46,9 @@ lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({buffer = bufnr})
 end)
 
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+
+local lspconfig = require('lspconfig')
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 lsp.setup()
 
 require("mason").setup()
@@ -54,13 +56,19 @@ require("mason-lspconfig").setup({
     ensure_instaled = {"clangd", "pyright", "lua-language-server"},
 })
 
+
 require("mason-lspconfig").setup_handlers {
-    -- pyright = function ()
-    --     require("lspconfig").pyright.setup {
-    --             settings = { python = { analysis = { autoImportCompletions = false }}}
-    --     }
-    -- end,
+    pyright = function ()
+        lspconfig.pyright.setup {
+                settings = { python = { analysis = { autoImportCompletions = false }}}
+        }
+    end,
+    clangd = function ()
+       lspconfig.clangd.setup {
+            cmd = {"clangd", "--clang-tidy", "--background-index", "--header-insertion=never"}
+       }
+    end,
     function (server_name)
-        require("lspconfig")[server_name].setup {}
+        lspconfig[server_name].setup {}
     end,
 }
