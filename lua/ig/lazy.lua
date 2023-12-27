@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     'sainnhe/gruvbox-material',
-    'sheerun/vim-polyglot',
     'nvim-treesitter/nvim-treesitter',
     {
         'nvim-tree/nvim-tree.lua',
@@ -29,7 +28,6 @@ local plugins = {
         },
     },
     'terrortylor/nvim-comment',
-    'mbbill/undotree',
     'tpope/vim-sensible',
     'cohama/lexima.vim',
     'airblade/vim-gitgutter',

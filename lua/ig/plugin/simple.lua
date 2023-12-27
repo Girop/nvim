@@ -4,7 +4,4 @@ require("nvim-web-devicons").setup {
     default = true,
 }
 
-
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-
 require("mason").setup()

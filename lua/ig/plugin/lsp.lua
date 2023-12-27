@@ -60,7 +60,7 @@ require("mason-lspconfig").setup({
 require("mason-lspconfig").setup_handlers {
     pyright = function ()
         lspconfig.pyright.setup {
-                settings = { python = { analysis = { autoImportCompletions = false }}}
+            settings = { python = { analysis = { autoImportCompletions = false } }}
         }
     end,
     clangd = function ()
