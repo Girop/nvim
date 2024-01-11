@@ -12,7 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    'sainnhe/gruvbox-material',
+    --'sainnhe/gruvbox-material',
+    "morhetz/gruvbox",
     'nvim-treesitter/nvim-treesitter',
     {
         'nvim-tree/nvim-tree.lua',
