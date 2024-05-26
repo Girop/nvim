@@ -119,20 +119,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-local default_setup = function(server)
-    require('lspconfig')[server].setup({
-        capabilities = lsp_capabilities,
-    })
-end
 
 require('mason').setup({})
-require('mason-lspconfig').setup({
-    ensure_installed = {},
-    handlers = {
-        default_setup,
-    },
-})
-
 
 local cmp = require('cmp')
 local lspkind = require('lspkind')
@@ -168,11 +156,24 @@ require('mason-lspconfig').setup({
         'rust_analyzer'
     },
     handlers = {
-        default_setup,
         lua_ls = function()
             require('lspconfig').lua_ls.setup({
                 capabilities = lsp_capabilities,
             })
         end,
+        clangd = function ()
+            local nvim_lsp = require('lspconfig')
+            nvim_lsp.clangd.setup {
+                cmd = {
+                    "clangd",
+                    '--background-index',
+                    '--header-insertion=never',
+                    '-j=4',
+                    '--inlay-hints=true',
+                    '--function-arg-placeholders',
+                    '--completion-style=detailed'
+                },
+            }
+        end
     },
 })
