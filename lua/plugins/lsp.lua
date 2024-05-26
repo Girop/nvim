@@ -1,82 +1,10 @@
 return {
-    
+    {'neovim/nvim-lspconfig'},
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'onsails/lspkind.nvim'},
+    {'L3MON4D3/LuaSnip'},
+    {'ray-x/lsp_signature.nvim'}
 }
-
--- return {
---     {
---         'VonHeikemen/lsp-zero.nvim',
---         preset = {},
---         on_attach = function(client, bufnr)
---             lsp.default_keymaps({buffer = bufnr})
---         end,
---         branch = 'v3.x',
---         dependencies = {
---             {
---                 'neovim/nvim-lspconfig',
---
---             },
---             {'williamboman/mason.nvim'},
---             {
---                 'williamboman/mason-lspconfig.nvim',
---                 ensure_instaled = {"clangd", "pyright", "lua-language-server"},
---                 setup_handlers = {
---                     pyright = function ()
---                         lspconfig.pyright.setup {
---                             settings = { python = { analysis = { autoImportCompletions = false } }}
---                         }
---                     end,
---                     clangd = function ()
---                         lspconfig.clangd.setup {
---                             cmd = {"clangd", "--clang-tidy", "--background-index", "--header-insertion=never"}
---                         }
---                     end,
---                     function (server_name)
---                         lspconfig[server_name].setup {}
---                     end,
---                 },
---             },
---             {
---                 'hrsh7th/nvim-cmp',
---                 preselect = 'item',
---                 sources = {
---                     {name = 'nvim_lsp'},
---                 },
---                 mapping = {
---                     ['<Tab>'] = require("cmp").mapping.confirm({select = true}),
---                     ['<C-e>'] = require("cmp").mapping.abort(),
---                     ['<C-u>'] = require("cmp").mapping.scroll_docs(-4),
---                     ['<C-d>'] = require("cmp").mapping.scroll_docs(4),
---                     ['<M-k>'] = require("cmp").mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}),
---                     ['<M-j>'] = require("cmp").mapping.select_next_item({behavior = cmp.SelectBehavior.Select}),
---                     ['<C-s>'] = require("cmp").mapping.complete(),
---                 },
---                 snippet = {
---                     expand = function(args)
---                         require('luasnip').lsp_expand(args.body)
---                     end,
---                 },
---                 window = {
---                     documentation = {
---                         max_height = 15,
---                         max_width = 60,
---                     }
---                 },
---                 formatting = {
---                     fields = {'abbr', 'menu', 'kind'},
---                     format = require('lspkind').cmp_format({
---                         mode = 'symbol_text',
---                         maxwidth = 50,
---                         ellipsis_char = '...',
---                         before = function (entry, vim_item)
---                             return vim_item
---                         end
---                     })
---                 },
---
---             },
---             {'hrsh7th/cmp-nvim-lsp'},
---             {'L3MON4D3/LuaSnip'},
---             {"onsails/lspkind.nvim"},
---         }
---     },
--- }
