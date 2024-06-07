@@ -78,8 +78,9 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>p", "\"_dP")
 
-vim.keymap.set("n", "<leader>v", "<cmd>vs<cr>")
-vim.keymap.set("n", "<leader>q", "<C-w><C-q>")
+vim.keymap.set("n", "sv", "<cmd>vs<cr>")
+vim.keymap.set("n", "sh", "<C-w>s")
+vim.keymap.set("n", "sq", "<C-w><C-q>")
 
 vim.keymap.set('n', "<leader><s-k>", "<cmd>vertical resize +15<cr>")
 vim.keymap.set('n', "<leader><s-j>", "<cmd>vertical resize -15<cr>")
@@ -96,7 +97,7 @@ require("lazy").setup("plugins")
 
 vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>') 
+vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -163,7 +164,7 @@ require('mason-lspconfig').setup({
         end,
         clangd = function ()
             local nvim_lsp = require('lspconfig')
-            nvim_lsp.clangd.setup {
+           nvim_lsp.clangd.setup {
                 cmd = {
                     "clangd",
                     '--background-index',
