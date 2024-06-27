@@ -157,6 +157,9 @@ require('mason-lspconfig').setup({
         'rust_analyzer'
     },
     handlers = {
+        pyright = function ()
+            require('lspconfig').pyright.setup {}
+        end,
         lua_ls = function()
             require('lspconfig').lua_ls.setup({
                 capabilities = lsp_capabilities,
