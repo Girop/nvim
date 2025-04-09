@@ -7,7 +7,7 @@ local function should_disable(lang, buf)
 end
 
 return {
-    "nvim-treesitter/nvim-treesitter", 
+    "nvim-treesitter/nvim-treesitter",
     config = function()
         local conf_req = require('nvim-treesitter.configs')
         conf_req.setup {
@@ -17,7 +17,7 @@ return {
                 language_tree = true,
                 disable = should_disable,
                 additional_vim_regex_highlighting = true,
-            },    
+            },
             sync_install = false,
         }
     end,

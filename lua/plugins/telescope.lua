@@ -1,4 +1,4 @@
-local function configure() 
+local function configure()
     local telescope = require("telescope")
     local builtin = require("telescope.builtin")
     local actions = require("telescope.actions")
@@ -6,7 +6,7 @@ local function configure()
     vim.keymap.set('n', "<leader>ff", builtin.find_files)
     vim.keymap.set('n', "<leader>fs", builtin.live_grep)
 
-    telescope.setup {    
+    telescope.setup {
         pickers = {
             find_files = {
                 hidden = false,
@@ -33,9 +33,8 @@ local function configure()
     }
 end
 
-
 return {
-	"nvim-telescope/telescope.nvim",  
+	"nvim-telescope/telescope.nvim",
     dependencies = {
         'nvim-lua/plenary.nvim',
         'BurntSushi/ripgrep',

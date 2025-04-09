@@ -1,7 +1,6 @@
-# My neovim config files
+# The Neovim configuration
 
 Prerequisites:
-- git
-- node.js
-- any "C" compiler
-- Ripgrep
+- git (downloading plugins)
+- any "C" compiler (compiling treesitters)
+- Ripgrep (telecope greping, optional)

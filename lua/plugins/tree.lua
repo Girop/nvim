@@ -4,13 +4,6 @@ return {
     keys = {
         {"<leader>ct", "<CMD>NvimTreeCollapse<CR>"},
         {"<leader>pb", "<CMD>NvimTreeToggle<CR>"},
-        {"<leader>pv", function()
-            if is_nvim_tree() then
-                vim.api.nvim_command("wincmd p")
-            else
-                vim.api.nvim_command("NvimTreeFocus")
-            end
-        end},
     },
     config = function()
         vim.cmd[[let g:nvim_tree_gitignore = 0]]
