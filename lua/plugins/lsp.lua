@@ -1,4 +1,5 @@
 local function lsp_setup()
+    vim.lsp.inlay_hint.enable(true)
     vim.api.nvim_create_autocmd('LspAttach', {
         desc = 'LSP actions',
         callback = function(event)
