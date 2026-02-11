@@ -76,9 +76,10 @@ local function mason_setup()
     mason_lspconfig.setup({
         ensure_installed = {
             'lua_ls',
-            'jedi_language_server',
             'clangd',
-            'rust_analyzer'
+            'rust_analyzer',
+            'pyright',
+            'neocmake'
         },
         handlers = handlers,
     })
