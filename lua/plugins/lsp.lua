@@ -42,12 +42,12 @@ end
 local function mason_setup()
     require('mason').setup()
     local mason_lspconfig = require('mason-lspconfig')
+    local lspconfig = require('lspconfig')
     local handlers = {
         function (server_name)
-            require('lspconfig')[server_name].setup{}
+            lspconfig[server_name].setup{}
         end,
         ["lua_ls"] = function ()
-            local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup {
                 settings = {
                     Lua = {
@@ -59,7 +59,7 @@ local function mason_setup()
             }
         end,
         ['clangd'] = function ()
-            require('lspconfig').clangd.setup {
+            lspconfig.clangd.setup {
                 cmd = {
                     "clangd",
                     '--background-index',
@@ -83,6 +83,13 @@ local function mason_setup()
         },
         handlers = handlers,
     })
+
+    vim.lsp.config("neocmake", {
+        default_config = {
+            cmd = { "neocmakelsp", "stdio" },
+        }
+    })
+    vim.lsp.enable("neocmake")
 end
 
 
