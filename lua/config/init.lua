@@ -24,7 +24,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "100"
 vim.opt.encoding = "utf-8"
 vim.scriptencoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
@@ -45,10 +44,6 @@ vim.diagnostic.config({
     float = true,
 })
 
+require("lazy").setup("plugins")
 require('config.keymaps')
 
-require("lazy").setup("plugins")
-
-vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
-vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
