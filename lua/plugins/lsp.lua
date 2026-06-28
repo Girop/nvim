@@ -71,14 +71,22 @@ local function mason_setup()
                 },
             }
         end,
+        ['basedpyright'] = function ()
+            lspconfig.basedpyright.setup {
+                settings = {
+                    basedpyright = {
+                        typeCheckingMode = "standard",
+                    }
+                }
+            }
+        end
     }
 
     mason_lspconfig.setup({
         ensure_installed = {
             'lua_ls',
             'clangd',
-            'rust_analyzer',
-            'pyright',
+            'basedpyright',
         },
         handlers = handlers,
     })
