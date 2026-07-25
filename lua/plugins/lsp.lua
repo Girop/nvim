@@ -39,9 +39,19 @@ local function lsp_setup()
     })
 end
 
+local function setup_lspconfig()
+    require("lspconfig").hls.setup({
+        cmd = {
+            "/home/ig/.ghcup/bin/haskell-language-server-wrapper",
+            "--lsp",
+        },
+    })
+end
+
 local function mason_setup()
     require('mason').setup()
     local mason_lspconfig = require('mason-lspconfig')
+
     local lspconfig = require('lspconfig')
     local handlers = {
         function(server_name)
@@ -93,7 +103,7 @@ local function mason_setup()
 end
 
 return {
-    { 'neovim/nvim-lspconfig' },
+    { 'neovim/nvim-lspconfig', config = setup_lspconfig},
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim', config = mason_setup },
     { 'hrsh7th/cmp-nvim-lsp' },
