@@ -12,7 +12,7 @@ return {
       function()
         require("agentic").toggle()
       end,
-      mode = { "n", "v", "i" },
+      mode = { "n", "v" },
       desc = "Toggle Agentic chat",
     },
     {
@@ -28,7 +28,7 @@ return {
       function()
         require("agentic").new_session()
       end,
-      mode = { "n", "v", "i" },
+      mode = { "n", "v"},
       desc = "New Agentic session",
     },
     {
@@ -38,7 +38,7 @@ return {
       end,
       desc = "Restore Agentic session",
       silent = true,
-      mode = { "n", "v", "i" },
+      mode = { "n", "v"},
     },
     {
       "<leader>ad",
