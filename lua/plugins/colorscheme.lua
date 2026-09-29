@@ -6,7 +6,7 @@ local function confgure()
         let g:gruvbox_italic = 1
         let g:gruvbox_improved_warnings = 1
 
-        colorscheme fahrenheit
+        colorscheme retrobox
     ]]
 end
 
