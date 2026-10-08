@@ -2,10 +2,6 @@ return {
   "carlos-algms/agentic.nvim",
 
   ---@type agentic.PartialUserConfig
-  opts = {
-    provider = "copilot-acp",
-  },
-
   keys = {
     {
       "<leader>\\",
@@ -30,6 +26,14 @@ return {
       end,
       mode = { "n", "v"},
       desc = "New Agentic session",
+    },
+    {
+      "<leader>ap",
+      function()
+        require("agentic").switch_provider()
+      end,
+      mode = { "n", "v" },
+      desc = "Switch Agentic provider",
     },
     {
       "<leader>ar",
