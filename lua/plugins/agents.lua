@@ -36,6 +36,17 @@ return {
       desc = "Switch Agentic provider",
     },
     {
+      "<leader>am",
+      function()
+        local session = require("agentic.session_registry").current()
+        if session then
+          session.config_options:_show_model_selector()
+        end
+      end,
+      mode = { "n", "v" },
+      desc = "Switch Agentic model",
+    },
+    {
       "<leader>ar",
       function()
         require("agentic").restore_session()
