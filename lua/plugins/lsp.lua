@@ -93,11 +93,7 @@ local function mason_setup()
     }
 
     mason_lspconfig.setup({
-        ensure_installed = {
-            'lua_ls',
-            'clangd',
-            'basedpyright',
-        },
+        ensure_installed = {},
         handlers = handlers,
     })
 end
