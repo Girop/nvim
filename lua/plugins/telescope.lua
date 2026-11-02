@@ -6,14 +6,14 @@ local function configure()
     vim.keymap.set('n', "<leader>ff", builtin.find_files)
     vim.keymap.set('n', "<leader>fs", builtin.live_grep)
 
+    local ignored_files = PROJECT_CONFIG and PROJECT_CONFIG.telescope or {}
+    local file_ignore_patterns = vim.list_extend({ ".git/.*", }, ignored_files.ignored or {})
+
     telescope.setup {
         pickers = {
             find_files = {
                 hidden = false,
-                file_ignore_patterns = {
-                    ".git/.*",
-                    "build/.*",
-                }
+                file_ignore_patterns = file_ignore_patterns,
             }
         },
         defaults = {
